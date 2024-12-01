@@ -1,0 +1,17 @@
+{
+  "name": "lotsofpixels/module-cronhealth-magento2",
+  "description": "module for monitoring the cronjob a heartbeat",
+  "type": "magento2-module",
+  "license": "OSL-3.0",
+  "require": {
+    "php": "~8.0|~8.1|~8.2|~8.3"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Lotsofpixels\\Cronhealthmonitor\\": ""
+    }
+  }
+}

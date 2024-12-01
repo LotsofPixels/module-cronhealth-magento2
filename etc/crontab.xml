@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="heartbeat">
+        <job name="cronhealth_send_ping" instance="Lotsofpixels\Cronhealthmonitor\Cron\SendHeartbeat" method="execute">
+            <schedule>* * * * *</schedule>
+        </job>
+        <job name="searchhealth_send_ping" instance="Lotsofpixels\Cronhealthmonitor\Cron\CheckSearchEngine" method="execute">
+            <schedule>* * * * *</schedule>
+        </job>
+    </group>
+</config>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="lotsofpixels" translate="label" sortOrder="9999" class="style-lotsofpixels">
+            <label>Lotsofpixels</label></tab>
+        <section id="cronhealth" translate="label" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Cron Health Monitor</label>
+            <tab>lotsofpixels</tab>
+            <resource>Lotsofpixels_Cronhealth::config</resource>
+            <group id="cronjob" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Cron Health</label>
+                <field id="cron_enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>This module schedules a cron job to send a HTTP GET request
+                        to the Monitor service</comment>
+                </field>
+                <field id="ping_url" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Ping address</label>
+                    <comment>Create a account  to receive a heartbeat</comment>
+                </field>
+                     </group>
+            <group id="seachengine" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                <label>Search engine Health</label>
+                <field id="search_enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="ping_url_search" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Ping address</label>
+                    <comment>Url for succes heartbeat</comment>
+                </field>
+                <field id="port_search" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Port number</label>
+                    <comment>Url for succes heartbeat</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
